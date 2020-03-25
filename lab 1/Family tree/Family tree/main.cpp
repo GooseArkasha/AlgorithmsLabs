@@ -2,7 +2,6 @@
 #include <stdlib.h>	//Для очистки экрана консоли
 #include <Windows.h>
 #include "FamilyMember.h"
-#include "FamilyTree.h"
 
 using namespace std;
 
@@ -59,8 +58,16 @@ int main() {
 		}
 			break;
 		case 3:
+			FamilyMember::currentFamilyMember->goToParent();
 			break;
 		case 4:
+		{
+			FamilyMember::currentFamilyMember->showCurrentFamilyMenberFullInfo();
+			cout << "Введите индекс ребенка, к которому хотите пререйти: ";
+			int childIndex;
+			cin >> childIndex;
+			FamilyMember::currentFamilyMember->goToChild(childIndex);
+		}
 			break;
 		case 5:
 			break;

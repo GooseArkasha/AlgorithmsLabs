@@ -1,2 +1,5 @@
-﻿  main.cpp
-  Family tree.vcxproj -> D:\Универ\СиАОД\Algorithms labs\lab 1\Family tree\Debug\Family tree.exe
+﻿  FamilyMember.cpp
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(45,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(51,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(56): warning C4715: FamilyMember::getChild: значение возвращается не при всех путях выполнения
+  Family tree.vcxproj -> D:\AlgorithmsLabs\lab 1\Family tree\Debug\Family tree.exe

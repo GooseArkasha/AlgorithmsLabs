@@ -31,5 +31,8 @@ public:
 
 	void showCurrentFamilyMember();
 	void showCurrentFamilyMenberFullInfo();
+
+	void goToParent();
+	void goToChild(int childIndex);
 };
 

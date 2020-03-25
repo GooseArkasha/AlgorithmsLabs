@@ -8,13 +8,13 @@ FamilyMember* FamilyMember::currentFamilyMember;
 
 FamilyMember::FamilyMember() {
 	this->name = "not initialized";
-	this->parent = nullptr;
+	this->parent = this;
 	this->numberOfChildren = 0;
 }
 
 FamilyMember::FamilyMember(string name) {
 	this->name = name;
-	this->parent = nullptr;
+	this->parent = this;
 	this->numberOfChildren = 0;
 }
 
@@ -43,7 +43,7 @@ void FamilyMember::addChild(FamilyMember child) {
 void FamilyMember::showChildren() {
 	cout << "Дети члена семьи по имени " << getName() << ":" << endl;
 	for (int i = 0; i < children.size(); i++) {
-		cout << "\t" << children[i].getName() << "; " << endl;
+		cout << "\t" << i << ". " << children[i].getName() << "; " << endl;
 	}
 }
 
@@ -64,4 +64,14 @@ void FamilyMember::showCurrentFamilyMember() {
 
 void FamilyMember::showCurrentFamilyMenberFullInfo() {
 	currentFamilyMember->showChildren();
+}
+
+void FamilyMember::goToParent() {
+	currentFamilyMember = parent;
+}
+
+void FamilyMember::goToChild(int childIndex) {
+	if (childIndex < numberOfChildren) {
+		currentFamilyMember = &children[childIndex];
+	}
 }
