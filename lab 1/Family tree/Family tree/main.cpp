@@ -1,20 +1,20 @@
 #include <iostream>
-#include <stdlib.h>	//Для очистки экрана консоли
+#include <stdlib.h>
 #include <Windows.h>
 #include "FamilyMember.h"
 
 using namespace std;
 
 int main() {
-	SetConsoleCP(1251);			//Задаем кодировку для вывода символов в консоли
-	SetConsoleOutputCP(1251);	//Задаем кодировку для ввода символов в консоли
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
 	int menueMode = 1;
 	string buffer;
 
 	FamilyMember familyFounder;
 	FamilyMember::currentFamilyMember = &familyFounder;
-	cout << "Введите имя ослнователя рода: ";
+	cout << "Enter the name of the originator of the family: ";
 	cin >> buffer;
 	familyFounder.setName(buffer);
 
@@ -23,19 +23,19 @@ int main() {
 	
 	while (menueMode != 0) {
 
-		system("cls");	//Очистка экрана консоли
+		system("cls");
 		FamilyMember::currentFamilyMember->showCurrentFamilyMember();
 
 		cout << endl;
-		cout << "Выберете действие:" << endl;
-		cout << "\tВвести или изменить имя текущего члена семьи\t1" << endl;
-		cout << "\tДобавить ребенка для текущего члена семьи\t2" << endl;
-		cout << "\tПерейти к родителю\t3" << endl;
-		cout << "\tПерейти к ребенку\t4" << endl;
-		cout << "\tПолучить информацию о типе родства нажмите\t5" << endl;
-		cout << "\tПолучить полную информацию о члене семьи\t6" << endl;
-		cout << "\tДля выхода из приложения нажмите\t0" << endl;
-		cout << endl << "Ваш выбор: ";
+		cout << "Select an action:" << endl;
+		cout << "\tEnter or change the name of the current family member\t1" << endl;
+		cout << "\tAdd a child for the current family member\t2" << endl;
+		cout << "\tGo to parent\t3" << endl;
+		cout << "\tGo to child\t4" << endl;
+		cout << "\tGet information about the type of relationship\t5" << endl;
+		cout << "\tGet full information about a family member\t6" << endl;
+		cout << "\tExit application\t0" << endl;
+		cout << endl << "Your choice: ";
 
 		cin >> menueMode;
 
@@ -44,14 +44,14 @@ int main() {
 			break;
 		case 1:
 			system("cls");
-			cout << "Введите имя: ";
+			cout << "Enter the name: ";
 			cin >> buffer;
 			FamilyMember::currentFamilyMember->setName(buffer);
 			system("pause");
 			break;
 		case 2: {
 			system("cls");
-			cout << "Введите имя ребенка: ";
+			cout << "Enter the child's name: ";
 			cin >> buffer;
 			FamilyMember tempFamilyMember(buffer);
 			FamilyMember::currentFamilyMember->addChild(tempFamilyMember);
@@ -63,13 +63,22 @@ int main() {
 		case 4:
 		{
 			FamilyMember::currentFamilyMember->showCurrentFamilyMenberFullInfo();
-			cout << "Введите индекс ребенка, к которому хотите пререйти: ";
+			cout << "Enter the index of the child you want to switch to: ";
 			int childIndex;
 			cin >> childIndex;
 			FamilyMember::currentFamilyMember->goToChild(childIndex);
 		}
 			break;
 		case 5:
+		{
+			string firstName, secondName;
+			cout << "Enter the fist name:";
+			cin >> firstName;
+			cout << "Enter the stcond name: ";
+			cin >> secondName;
+			FamilyMember::showTypeOfRelationship(firstName, secondName, &familyFounder);
+			system("pause");
+		}
 			break;
 		case 6:
 			system("cls");
@@ -77,7 +86,7 @@ int main() {
 			system("pause");
 			break;
 		default:
-			cout << "Ошибка при вводе" << endl;
+			cout << "Entry mistake" << endl;
 			system("pause");
 		}
 	}

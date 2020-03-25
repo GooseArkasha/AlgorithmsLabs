@@ -12,9 +12,13 @@ private:
 	int numberOfChildren;
 	vector <FamilyMember> children;
 
+	static void traversePreorder(FamilyMember* node, vector <FamilyMember*> firstVector,
+		vector <FamilyMember*> secondVector, string firstName, string secondName,
+		bool* firstFlag, bool *secondFlag);
+
 public:
 
-	static FamilyMember* currentFamilyMember;	//Позволит перемещаться между членами семьи
+	static FamilyMember* currentFamilyMember;
 
 	FamilyMember();
 	FamilyMember(string name);
@@ -22,6 +26,8 @@ public:
 
 	void setName(string name);
 	string getName();
+
+	vector <FamilyMember> getChildren();
 
 	void addChild(FamilyMember child);
 
@@ -34,5 +40,8 @@ public:
 
 	void goToParent();
 	void goToChild(int childIndex);
+
+
+	static void showTypeOfRelationship(string firstName, string secondName, FamilyMember* familyFounderPtr);
 };
 

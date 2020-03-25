@@ -1,5 +1,10 @@
 ﻿  FamilyMember.cpp
-D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(45,20): warning C4018: <: несоответствие типов со знаком и без знака
-D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(51,20): warning C4018: <: несоответствие типов со знаком и без знака
-D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(56): warning C4715: FamilyMember::getChild: значение возвращается не при всех путях выполнения
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(49,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(55,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(97,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(102,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(113,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(118,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(140,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\AlgorithmsLabs\lab 1\Family tree\Family tree\FamilyMember.cpp(60): warning C4715: FamilyMember::getChild: значение возвращается не при всех путях выполнения
   Family tree.vcxproj -> D:\AlgorithmsLabs\lab 1\Family tree\Debug\Family tree.exe
